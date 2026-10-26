@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ruikai Li</title>
+<style>
+  :root {
+    --fg: #1a1a1a;
+    --muted: #666;
+    --accent: #0b5cad;
+    --line: #e5e5e5;
+    --bg: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#e8e8e8; --muted:#9a9a9a; --accent:#6cb6ff; --line:#2a2a2a; --bg:#161616; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 64px 24px 96px;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+  main { max-width: 680px; margin: 0 auto; }
+  h1 { font-size: 2rem; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .sub { color: var(--muted); margin: 0 0 2px; }
+  .pronoun { color: var(--muted); font-size: 0.95rem; }
+  .contact { margin: 18px 0 0; font-size: 0.95rem; }
+  .contact a { color: var(--accent); text-decoration: none; }
+  .contact a:hover { text-decoration: underline; }
+  .sep { color: var(--muted); margin: 0 8px; }
+  h2 {
+    font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--muted); font-weight: 600;
+    margin: 44px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--line);
+  }
+  p { margin: 0 0 12px; }
+  ul { margin: 0; padding-left: 1.15em; }
+  li { margin-bottom: 8px; }
+  .item-title { font-weight: 600; }
+  .item-meta { color: var(--muted); font-size: 0.93rem; }
+  footer { margin-top: 56px; color: var(--muted); font-size: 0.82rem; }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>Ruikai Li</h1>
+  <p class="sub">Undergraduate Student, The Hong Kong University of Science and Technology (Guangzhou)</p>
+  <p class="pronoun">he/him</p>
+
+  <!-- IMPORTANT: OpenReview requires the page to show your name AND email in plain text. -->
+  <p class="contact">
+    Email: <a href="mailto:rli321@connect.hkust-gz.edu.cn">rli321@connect.hkust-gz.edu.cn</a>
+    <span class="sep">·</span>
+    <a href="https://github.com/KA1SEN-KK">GitHub</a>
+    <!-- 有 ORCID 后在这里加回来，格式：
+    <span class="sep">·</span><a href="https://orcid.org/0009-0000-0000-0000">ORCID</a>
+    -->
+  </p>
+
+  <h2>About</h2>
+  <p>
+    I am an undergraduate student at HKUST(GZ), working on machine learning systems,
+    large language model inference, and AI infrastructure. My current work focuses on
+    performance optimization of attention kernels on multi-GPU clusters.
+  </p>
+
+  <h2>Research Interests</h2>
+  <ul>
+    <li>Machine Learning Systems (MLSys)</li>
+    <li>LLM Inference and Serving</li>
+    <li>AI Infrastructure and High-Performance Computing</li>
+    <li>GPU Kernel Optimization, MPI</li>
+  </ul>
+
+  <h2>Projects</h2>
+  <ul>
+    <li>
+      <span class="item-title">MPI Attention Benchmark</span><br>
+      <span class="item-meta">Multi-GPU attention kernel optimization: load balancing, slow-rank mitigation, and end-to-end throughput tuning.</span>
+    </li>
+  </ul>
+
+  <footer>
+    Last updated: <span id="d"></span>
+  </footer>
+
+</main>
+<script>
+  document.getElementById('d').textContent =
+    new Date().toLocaleDateString('en-CA', { year: 'numeric', month: '2-digit', day: '2-digit' });
+</script>
+</body>
+</html>
